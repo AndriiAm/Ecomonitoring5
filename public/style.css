@@ -1,0 +1,102 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #EDADFF;
+    color: #101819;
+    font-size: 18px;
+}
+
+#nav_logo{
+    position: absolute;
+    width: 60px;
+}
+
+#nav_wrapper{
+    display: flex;
+    background-color: #E282FD;
+    list-style-type: none;
+    justify-content: flex-end;
+    line-height: 60px;
+}
+
+#nav_wrapper a{
+    display: block;
+    padding: 0 40px;
+    font-size: 20px;
+}
+
+#nav_wrapper a:link,#nav_wrapper a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+#nav_wrapper a:hover, #nav_wrapper a:active{
+    background-color: #D57AEF;
+}
+
+#main_wrapper{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+}
+
+#entering, #table1{
+    grid-column: 1/7;
+    width: 90%;
+}
+
+#table2{
+    grid-column: 1/7;
+    width: 70%;
+}
+
+#entering{
+    margin: 50px 0 30px;
+    width: 70%;
+    border: 2px solid #E282FD;
+    border-radius: 20px;
+    text-align: justify;
+    padding: 20px;
+}
+
+table{
+    margin: 15px 0;
+    border-collapse: collapse;
+}
+
+th{
+    font-size: 20px;
+}
+
+td {
+    padding: 8px;
+    text-align: center;
+    border: 2px solid #E282FD;
+}
+
+footer{
+    margin-top: 70px;
+    padding-bottom: 15px;
+    text-align: center;
+    background-color: #E282FD;
+    font-size: 17px;
+}
+
+#contacts{
+    padding-right: 5px;
+}
+
+#copyright{
+    padding-top: 5px;
+}
+
+footer a:link, footer a:visited{
+    text-decoration: none;
+}
+
+footer a:hover, footer a:active{
+    text-decoration: underline;
+}

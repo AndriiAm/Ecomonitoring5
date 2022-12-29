@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon1.jpg">
+    <title>Оцінка потенційного ризику здоров'ю населення в залежності від якості води</title>
+</head>
+
+<body>
+<nav>
+    <img id="nav_logo" src="images/logo.png" alt="">
+    <ul id="nav_wrapper">
+        <li><a href="#entering">Вступ</a></li>
+        <li><a href="#table1">Статистика</a></li>
+        <li><a href="#contacts">Контакти</a></li>
+    </ul>
+</nav>
+
+<main id="main_wrapper">
+    <div id="entering">
+        Ледь не щодня усі ми з новин чуємо про перевищення норми вмісту шкідливих речовин в повітрі у тому чи іншому
+        місті нашої країни - починаючи від Києва і закінчуючи Запоріжжям, Одесою або містами Західної України. Подібні
+        викиди призводять шкоду не тільки здоров'ю та якісті життя людини, а й наносять збитків країні, адже в більшості
+        випадків саме на її плечі лягає тагяр виправлення та контролю екологічної ситуації.<br>
+        З цієї причини нашої командою було вирішено провести невелике дослідження. Ми перевірили декілька найбільших
+        промислових об'єктів та оцінили збитки, котрі ці об'єкти наносять бюджету України. З результатами пропонуємо
+        ознайомитись нижче.
+    </div>
+
+    <table id="table1">
+        <tr>
+            <th colspan="9">Розрахунок розміру збитків, які заподіяні державі в результаті наднормативних викидів забруднюючих речовин в
+                атмосферне повітря</th>
+        </tr>
+
+        <tr class="first">
+            <td>Об'єкт</td>
+            <td>Речовина</td>
+            <td>Понаднормовий викид, т</td>
+            <td>Розмір збитків, грн</td>
+            <td>Рік спостережень</td>
+        </tr>
+
+        <tr class="row">
+            {{#each Pollution}}
+                {{Table this.ObjectNumber this.ElementNumber this.Mi this.Kzi this.YearOfData}}
+            {{/each}}
+        </tr>
+    </table>
+
+    <table id="table2">
+        <tr>
+            <th colspan="9">Розрахунок суми збитків, які заподіяні державі в результаті наднормативних викидів забруднюючих речовин в
+                атмосферне повітря</th>
+        </tr>
+
+        <tr class="first">
+            <td>Об'єкт</td>
+            <td>Cума збитків, грн</td>
+            <td>Рік спостережень</td>
+        </tr>
+
+        <tr class="row">
+            {{#each Pollution}}
+                {{Table2 this.ObjectNumber this.YearOfData}}
+            {{/each}}
+        </tr>
+    </table>
+
+
+
+
+</main>
+<footer>
+    <a href="https://mepr.gov.ua/" target="_blank" id="contacts"><img src="images/logo1.png" width="80px" alt=""></a><br>
+    <p>
+        mobile:<a href = "tel:(044) 206-31-15"> (044) 206-31-15</a>&nbsp
+        <span style="border-left:3px solid #9F3EBA;"></span>
+        &nbsp email:<a href = "mailto:info@mepr.gov.ua"> info@mepr.gov.ua</a><br>
+    </p>
+
+    <p id="copyright">
+        Copyright &copy; 2021
+    </p>
+</footer>
+
+</body>
+</html>
